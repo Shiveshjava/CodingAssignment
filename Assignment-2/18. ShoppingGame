@@ -1,0 +1,47 @@
+
+import java.util.Scanner;
+
+public class day15conversionSB_DB {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int t = sc.nextInt();
+        for (int i = 0; i < t; i++) {
+            int m = sc.nextInt();
+            int n =sc.nextInt();
+            String ans = Shopping(m,n);
+            System.out.println(ans);
+                    }
+                    
+                        }
+            
+                    
+            
+                
+            
+                private static String Shopping(int m, int n) {
+                    // TODO Auto-generated method stub
+                    int temp = 1;  // This is the number of smartphones being purchased (1, 2, 3, ...)
+                    int aayushTotal = 0;  // Total smartphones Aayush has bought
+                    int harshitTotal = 0;  // Total smartphones Harshit has bought
+            
+                    // Continue the game until one of them can't buy the required number
+                    while (true) {
+                        if (temp % 2 != 0) {  // Aayush's turn (odd turn numbers)
+                            if (aayushTotal + temp > m) {
+                                return "Harshit";  // Aayush can't buy the smartphones, so Harshit wins
+                            }
+                            aayushTotal += temp;  // Aayush buys 'temp' smartphones
+                        } else {  // Harshit's turn (even turn numbers)
+                            if (harshitTotal + temp > n) {
+                                return "Aayush";  // Harshit can't buy the smartphones, so Aayush wins
+                            }
+                            harshitTotal += temp;  // Harshit buys 'temp' smartphones
+                        }
+            
+                        // Increment the number of smartphones for the next turn
+                        temp++;
+                    }
+                
+                }
+}

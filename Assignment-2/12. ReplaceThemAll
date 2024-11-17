@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class day15Chewbecca {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+long l=sc.nextLong();
+long ans=0;
+long mul=1;
+
+while(l>5){
+    long digit = l%10;
+    if(digit!=0){
+        ans = ans + digit*mul;
+    }
+    else{
+ans = ans+ (5)*mul;
+    }
+    l=l/10;
+    mul=mul*10;
+    }
+
+
+    if(l==5){
+        ans=ans+l*mul;
+    }
+    if(l!=5){
+        ans = ans+l*mul;
+    }
+    System.out.println(ans);
+}
+    }
+

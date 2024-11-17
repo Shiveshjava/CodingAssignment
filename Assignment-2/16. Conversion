@@ -1,0 +1,54 @@
+//  see it once again as i copy it from chatgpt..........
+import java.util.Scanner;
+
+public class day15conversionSB_DB {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // Reading input values
+        int sb = sc.nextInt(); // source base
+        int db = sc.nextInt(); // destination base
+        String sn = sc.next(); // number in source base
+        
+        // Step 1: Convert the number sn from source base sb to decimal
+        int decimalValue = convertToDecimal(sn, sb);
+        
+        // Step 2: Convert the decimal value to the destination base db
+        String result = convertFromDecimal(decimalValue, db);
+        
+        // Output the result
+        System.out.println(result);
+        
+        sc.close();
+    }
+    
+    // Converts a number from a given base to decimal (base 10)
+    private static int convertToDecimal(String sn, int sb) {
+        int decimalValue = 0;
+        int length = sn.length();
+        
+        // Traverse each character in the string sn
+        for (int i = 0; i < length; i++) {
+            int digit = sn.charAt(i) - '0'; // Convert character to integer
+            decimalValue += digit * Math.pow(sb, length - i - 1);
+        }
+        
+        return decimalValue;
+    }
+    
+    // Converts a decimal number to the given base db
+    private static String convertFromDecimal(int decimalValue, int db) {
+        if (decimalValue == 0) {
+            return "0";
+        }
+        
+        StringBuilder sb = new StringBuilder();
+        
+        while (decimalValue > 0) {
+            sb.append(decimalValue % db); // Append the remainder (the next digit in the result)
+            decimalValue /= db; // Reduce the decimal value
+        }
+        
+        return sb.reverse().toString(); // Reverse the string to get the correct number
+    }
+}

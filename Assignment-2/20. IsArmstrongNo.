@@ -1,0 +1,40 @@
+import java.util.Scanner;
+public class day15Chewbecca {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n= sc.nextInt();
+      boolean  a = isarmstrong(n);
+      System.out.println(a);
+      }
+      
+          private static boolean isarmstrong(int n) {
+              // TODO Auto-generated method stub
+              int temp = n;
+              int count = 0;
+  
+              // Calculate the number of digits (count)
+              while (temp > 0) {
+                  temp = temp / 10;
+                  count++;
+              }
+  
+              int sum = 0;
+              temp = n;
+  
+              // Check if the number is an Armstrong number
+              while (temp > 0) {
+                  int digit = temp % 10;
+                  sum += Math.pow(digit, count);
+                  temp = temp / 10;
+              }
+  
+              // If sum matches the number, it's an Armstrong number
+              if (sum == n) {
+                  return true;
+              }
+
+
+
+
+              return false;
+          }}
