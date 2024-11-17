@@ -1,0 +1,70 @@
+
+// incomplete.............
+
+public class day14copy {
+
+    
+    
+        public static void main(String[] args) {
+          
+           int n=7;
+           int i=1;
+           int nsp1=n-1;
+           int nst1=1;
+           int nst2=0;
+           int nsp2 =0;
+           
+           while (i<=n) {
+            int val=i;
+            int csp1=0;
+            while (csp1<nsp1) {
+                System.out.print("  ");
+                csp1++;
+                
+            }
+            
+            int cst1 =0;
+            while (cst1<nst1) {
+                System.out.print("* ");
+                cst1++;
+                
+            }
+            int csp2=0;
+            while (csp2<nsp2) {
+                System.out.print("  ");
+                csp2++;
+                
+                
+            }
+            int cst2 =0;
+            while (cst2<nst2) {
+                System.out.print("* ");
+                cst2++;
+                
+            }
+
+            if(i>n/2){
+                System.out.println();
+                i++;
+                nsp1+=2;
+                nsp2-=2;
+                nst1-=1;
+                nst2--;
+                val--;
+               }
+               else{
+                System.out.println();
+                i++;
+                nsp1-=2;
+                nsp2+=2;
+                nst1+=1;
+                nst2++;
+                val++;
+               }
+            
+           }
+           
+
+        }
+    
+    }

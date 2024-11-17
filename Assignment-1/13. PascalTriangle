@@ -1,0 +1,35 @@
+// from takeYouForwalrd yt channel
+// ques1--row and column are giveb we have to print element at that place
+int nCr(int n, int r) {
+long long res = 1;
+forint
+i = O;i‹r;i++) {
+res = res * (n - i); // 10*9*8
+res = res / (1 + 1);// 1*2*3
+}
+return res;
+
+}
+
+
+
+// print any nth row of Pascal triangle
+M1 - call nCr funtion in a loop to print whole row
+
+M2 - public class tUf {
+    public static List<Integer> generateRow(int row) {
+        long ans = 1;
+        List<Integer> ansRow = new ArrayList<>();
+        ansRow.add(1); //inserting the 1st element
+
+        //calculate the rest of the elements:
+        for (int col = 1; col < row; col++) {
+            ans = ans * (row - col);
+            ans = ans / col;
+            ansRow.add((int)ans);
+        }
+        return ansRow;
+    }
+
+// print whole pattern
+use m2 to print all row.....

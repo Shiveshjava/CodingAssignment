@@ -1,0 +1,56 @@
+
+    *****
+   *    *
+  *    *
+ *    *
+*****
+public class day14copy {
+    public static void main(String[] args) {
+       int n=5;
+       int i=1;
+       int nsp1 =n-1;
+       int nsp2 =4;
+       int nst=n;
+       while(i<=n){
+        //spaces
+        int csp1=0;
+while (csp1<nsp1) {
+    System.out.print(" ");
+    csp1++;
+
+}
+       //4 star
+        if(i==1||i==5){
+            int cst =0;
+            while(cst<nst){
+            System.out.print("*");
+            cst++;
+        }
+        }
+        else{
+            // star
+            System.out.print("*");
+            //spaces
+            int csp2=0;
+            while (csp2<nsp2) {
+                System.out.print(" ");
+                csp2++;
+        
+            }
+            System.out.print("*");
+
+        }
+        nsp1--;
+    i++;
+    System.out.println();
+        
+    }
+    
+    
+
+
+
+
+         }
+    }
+

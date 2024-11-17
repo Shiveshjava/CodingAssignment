@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class day4prime {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        long  n = sc.nextLong();
+        int i=2;
+        boolean f = true;
+        while(i<n){
+            if(n%i==0 &&i!=n){
+System.out.println("not prime");
+ f = false;
+break;
+            }
+            else{
+                i++;
+
+            }
+
+        }
+        if(f==true )
+        System.out.println("prime;");
+    }
+    
+}

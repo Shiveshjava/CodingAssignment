@@ -1,0 +1,71 @@
+5                     5 
+5 4                 4 5 
+5 4 3             3 4 5 
+5 4 3 2         2 3 4 5 
+5 4 3 2 1     1 2 3 4 5 
+5 4 3 2 1 0 0 1 2 3 4 5 
+5 4 3 2 1     1 2 3 4 5 
+5 4 3 2         2 3 4 5 
+5 4 3             3 4 5 
+5 4                 4 5 
+public class day14copy {
+
+    
+    
+        public static void main(String[] args) {
+            int n =10;
+            int i=1;
+            int nst1=1;
+            int nst2 =1;
+            int nsp= 5*2;
+            while (i<=n) {
+                int val1=5;
+                int cst1=0;
+                int val2=0;
+                while (cst1<nst1) {
+                    System.out.print(val1+ " ");
+                    val2=val1;
+                    val1--;
+                    cst1++;
+                    
+                }
+                int csp=0;
+                while (csp<nsp) {
+                    System.out.print("  ");
+                    csp++;
+
+                    
+                }
+                int cst2=0;
+                
+                while (cst2<nst2) {
+                    System.out.print(val2+ " ");
+                   
+                    val2++;
+
+                    cst2++;
+                }
+                if(i>n/2){
+                    System.out.println();
+                i++;
+                nst1--;
+                nsp+=2;
+                nst2--;
+                }
+                else{
+                System.out.println();
+                i++;
+                nst1++;
+                nsp-=2;
+                nst2++;
+                
+                }
+                
+            }
+           
+        }
+    
+    }
+         
+    
+

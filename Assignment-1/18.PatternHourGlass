@@ -1,0 +1,58 @@
+5 4 3 2 1 0 1 2 3 4 5 
+  4 3 2 1 0 1 2 3 4 
+    3 2 1 0 1 2 3 
+      2 1 0 1 2 
+        1 0 1 
+          0 
+        1 0 1 
+      2 1 0 1 2 
+    3 2 1 0 1 2 3 
+  4 3 2 1 0 1 2 3 4 
+5 4 3 2 1 0 1 2 3 4 5 
+public class day14copy {
+    public static void main(String[] args) {
+        int n = 5 * 2 + 1;  // The number of rows in the pattern (11 in this case)
+        int i = 1;  // Row index
+        int nsp = 0;  // Number of spaces before the pattern starts
+        int nst = n;  // Number of numbers to print (decreases towards the center)
+        int val = 5;  // The starting value for the numbers
+
+        // Loop to print each row
+        while (i <= n) {
+
+            // Printing spaces before numbers
+            int csp = 0;
+            while (csp < nsp) {
+                System.out.print("  ");
+                csp++;
+            }
+
+            // Printing the values in each row
+            int cst = 0;
+            int tempVal = val;
+            while (cst < nst) {
+                System.out.print(tempVal + " ");
+                if (cst < nst / 2) {
+                    tempVal--;  // Decrease the value for the left half
+                } else {
+                    tempVal++;  // Increase the value for the right half
+                }
+                cst++;
+            }
+
+            // Move to the next row
+            System.out.println();
+            if (i <= n / 2) {
+                nsp++;   // Increase the spaces before numbers as we go down
+                nst -= 2;  // Decrease the number of numbers to print
+                val--;    // Decrease the starting value for the next row
+            } else {
+                nsp--;   // Decrease the spaces before numbers as we go up
+                nst += 2;  // Increase the number of numbers to print
+                val++;    // Increase the starting value for the next row
+            }
+
+            i++;
+        }
+    }
+}

@@ -1,0 +1,53 @@
+        1 
+      2 3 2 
+    3 4 5 4 3 
+  4 5 6 7 6 5 4 
+5 6 7 8 9 8 7 6 5 
+import java.util.Scanner;
+
+public class day14Patterntriangle {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt(); 
+        
+        int i = 1; 
+        int nst=1;
+        int nsp = n - 1; 
+        
+        while (i <= n) {
+            
+            int csp = 0;
+            while (csp < nsp) {
+                System.out.print("  "); 
+                csp++;
+            }
+
+            
+            int val = i;
+            int cst = 0;
+            while (cst < nst) { 
+                System.out.print(val + " ");
+                val++;
+                cst++;
+            }
+
+            
+            val--; 
+            cst = 0;
+            while (cst < nst - 1) { 
+                val--;
+                System.out.print(val + " ");
+                cst++;
+            }
+
+            
+            i++;
+            nsp--; 
+            nst++;
+            System.out.println(); 
+        }
+
+        
+    }
+}

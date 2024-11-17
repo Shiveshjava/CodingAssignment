@@ -1,0 +1,38 @@
+    * 
+  * * * 
+* * * * * 
+  * * * 
+    * 
+public class day13_mirrorstar {
+
+    public static void main(String[] args) {
+        int n =5;
+        int i=1;
+        int nst=1;
+        int nsp =2;
+        while(i<=n){
+            int csp=0;
+            while(csp<nsp){
+                System.out.print("  ");
+                csp++;
+            }
+            int cst =0;
+            while (cst<nst) {
+                System.out.print("* ");
+                cst++;
+            }if (i>n/2) {
+                i++;
+                System.out.println();
+                nst-=2;
+                nsp++;
+                
+            }
+            else{
+            System.out.println();
+            i++;
+                nst+=2;
+                nsp--;
+        }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class day14Tableof2 {
+    public static void main(String[] args) {
+        
+    
+    Scanner sc = new Scanner(System.in);
+    int x =sc.nextInt();
+    int y =sc.nextInt();
+
+    for(int i =1;i<=(x*y)/x;i++){
+System.out.println(x*i);
+    }
+
+}
+}
