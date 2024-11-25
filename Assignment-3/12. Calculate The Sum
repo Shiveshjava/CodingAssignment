@@ -1,1 +1,40 @@
 
+import java.util.Scanner;
+
+public class Main {  // Corrected the class name to 'Main' (uppercase 'M')
+    
+    private static final int MOD = 1000000007;
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // Read input
+        int n = sc.nextInt();  // size of the array
+        int[] arr = new int[n];
+        
+        // Read the array elements
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        // Number of operations
+        int q = sc.nextInt();  
+        
+        // Initial sum of the array
+        long sum = 0;
+        for (int i = 0; i < n; i++) {
+            sum = (sum + arr[i]) % MOD;
+        }
+
+        // Process each operation
+        for (int i = 0; i < q; i++) {
+            int x = sc.nextInt();
+
+            // Each operation doubles the sum
+            sum = (sum * 2) % MOD;
+        }
+
+        // Output the final sum modulo 10^9 + 7
+        System.out.println(sum);
+    }
+}
