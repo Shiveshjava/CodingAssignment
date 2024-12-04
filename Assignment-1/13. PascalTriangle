@@ -14,7 +14,7 @@ return res;
 
 
                                                     // print any nth row of Pascal triangle
-                                         M1 - call nCr funtion in a loop to print whole row
+                                         #M1 - call nCr funtion in a loop to print whole row
 
 M2 - public class tUf {
     public static List<Integer> generateRow(int row) {
