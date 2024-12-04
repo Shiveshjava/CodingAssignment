@@ -1,5 +1,5 @@
 // from takeYouForwalrd yt channel
-// ques1--row and column are giveb we have to print element at that place
+// ques1--row and column are given we have to print element at that place
 int nCr(int n, int r) {
 long long res = 1;
 forint
