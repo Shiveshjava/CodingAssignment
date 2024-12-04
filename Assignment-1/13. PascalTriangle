@@ -1,5 +1,5 @@
-// from takeYouForwalrd yt channel
-// ques1--row and column are given we have to print element at that place
+                                                // from takeYouForwalrd yt channel
+                                       // ques1--row and column are given we have to print element at that place
 int nCr(int n, int r) {
 long long res = 1;
 forint
@@ -13,8 +13,8 @@ return res;
 
 
 
-// print any nth row of Pascal triangle
-M1 - call nCr funtion in a loop to print whole row
+                                                    // print any nth row of Pascal triangle
+                                         M1 - call nCr funtion in a loop to print whole row
 
 M2 - public class tUf {
     public static List<Integer> generateRow(int row) {
@@ -31,5 +31,56 @@ M2 - public class tUf {
         return ansRow;
     }
 
-// print whole pattern
-use m2 to print all row.....
+                                             // print whole pattern
+                                           use m2 to print all row.....
+
+
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class revison {
+    
+    // Function to generate a single row of Pascal's Triangle
+    public static List<Integer> generateRow(int row) {
+        List<Integer> ansRow = new ArrayList<>();
+        long ans = 1;
+
+        // The first element in the row is always 1
+        ansRow.add(1);
+
+        // Calculate the rest of the elements in the row
+        for (int col = 1; col <= row; col++) {
+            // Calculate the next element based on the previous one
+            ans = ans * (row - col + 1) / col;
+            ansRow.add((int) ans); // Cast to int and add to the row
+        }
+
+        return ansRow;
+    }
+
+    // Function to print the entire Pascal's Triangle up to a certain number of rows
+    public static void printPascalsTriangle(int numRows) {
+        for (int row = 0; row < numRows; row++) {
+            // Generate each row
+            List<Integer> rowValues = generateRow(row);
+
+           
+
+            for (int val : rowValues) {
+                System.out.print(val + " ");
+            }
+            System.out.println(); // Newline after each row
+        }
+    }
+
+    public static void main(String[] args) {
+        // Specify how many rows of Pascal's Triangle you want to print
+        int numRows = 6;
+        
+        // Print Pascal's Triangle
+        printPascalsTriangle(numRows);
+    }
+}
+
