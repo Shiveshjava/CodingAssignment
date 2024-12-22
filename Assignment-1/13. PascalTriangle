@@ -13,10 +13,10 @@ return res;
 
 
 
-                                                    // print any nth row of Pascal triangle
+                                                 ques 2 ..   // print any nth row of Pascal triangle
                                          #M1 - call nCr funtion in a loop to print whole row
 
-M2 - public class tUf {
+#M2 - public class tUf {
     public static List<Integer> generateRow(int row) {
         long ans = 1;
         List<Integer> ansRow = new ArrayList<>();
@@ -31,7 +31,7 @@ M2 - public class tUf {
         return ansRow;
     }
 
-                                             // print whole pattern
+                                            ques 3..... // print whole pattern
                                            use m2 to print all row.....
 
 
