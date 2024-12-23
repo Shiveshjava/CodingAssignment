@@ -40,3 +40,57 @@ System.out.println("0");
 }
 
 }
+
+
+
+
+
+
+M2 Dry run in copy
+
+
+
+
+
+import java.util.Scanner;
+
+public class BostonNumber {
+
+    public static boolean isBostonNumber(int num) {
+        int sumOfDigits = sumOfDigits(num);
+        int sumOfPrimes = sumOfPrimeFactors(num);
+        return sumOfDigits == sumOfPrimes;
+    }
+
+    public static int sumOfDigits(int num) {
+        int sum = 0;
+        while (num > 0) {
+            sum += num % 10;
+            num /= 10;
+        }
+        return sum;
+    }
+
+    public static int sumOfPrimeFactors(int num) {
+        int sum = 0;
+        for (int i = 2; i <= num; i++) {
+            while (num % i == 0) {
+                sum += sumOfDigits(i);
+                num /= i;
+            }
+        }
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = scanner.nextInt();
+
+        if (isBostonNumber(num)) {
+            System.out.println(num + " is a Boston number.");
+        } else {
+            System.out.println(num + " is not a Boston number.");
+        }
+    }
+}
