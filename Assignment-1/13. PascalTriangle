@@ -4,7 +4,7 @@ int nCr(int n, int r) {
 long long res = 1;
 for (int i = O;i‹r;i++) {
 res = res * (n - i); // 10*9*8
-res = res / (1 + 1);// 1*2*3
+res = res / (i + 1);// 1*2*3
 }
 return res;
 
