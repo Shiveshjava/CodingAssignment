@@ -2,8 +2,7 @@
                                        // ques1--row and column are given we have to print element at that place
 int nCr(int n, int r) {
 long long res = 1;
-forint
-i = O;i‹r;i++) {
+for (int i = O;i‹r;i++) {
 res = res * (n - i); // 10*9*8
 res = res / (1 + 1);// 1*2*3
 }
