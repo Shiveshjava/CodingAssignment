@@ -3,13 +3,16 @@
 * * * * * 
   * * * 
     * 
-public class day13_mirrorstar {
-
+import java.util.Scanner;   
+public class patternsss {
     public static void main(String[] args) {
-        int n =5;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number of rows (odd): ");
+        int n = sc.nextInt();   
+        
         int i=1;
         int nst=1;
-        int nsp =2;
+        int nsp =n/2;
         while(i<=n){
             int csp=0;
             while(csp<nsp){
@@ -35,4 +38,4 @@ public class day13_mirrorstar {
         }
         }
     }
-}
+    }
