@@ -5,7 +5,8 @@
     1 
 public class day14copy {
     public static void main(String[] args) {
-        int n =3;
+        Scanner sc = new Scanner(System.in);
+        int n =sc.nextInt();
         int i=1;
         int nst=1;
         int nsp =n-1;
