@@ -4,12 +4,15 @@
 * *     * * 
 * * * * * * 
 
-public class day13_hollowdiamind {
+import java.util.Scanner;   
+public class patternsss {
     public static void main(String[] args) {
-        int n =5;
+        Scanner sc = new Scanner(System.in);
+        System.err.println("Enter the number of rows(odd number)");
+        int n =sc.nextInt();
         int i=1;
-        int nst1= 3;
-        int nst2 =3;
+        int nst1= n/2  +1;
+        int nst2 = n/2 ;
         int nsp =0;
         while(i<=n){
             int cst =0;
@@ -25,13 +28,13 @@ public class day13_hollowdiamind {
 
             }
            cst =0;
-            while(cst<nst2){
+            while(cst<=nst2){
                 System.out.print("* ");
                 cst++;
 
             }
 
-            if(i==3 || i==4||i==5){
+            if(i>n/2){
                 System.out.println();
                 i++;
                 nst1++;
@@ -48,5 +51,4 @@ public class day13_hollowdiamind {
             
         }
     }
-    
-}
+    }
