@@ -4,17 +4,7 @@
 * *     * * 
 * * * * * * 
 
-### Example: Highlighting Java Code
-
-If you want to highlight Java code, you would do it like this:
-
-```markdown
-```java
-public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
-    }
-}
+```markdown ```java
 
 import java.util.Scanner;   
 public class patternsss {
