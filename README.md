@@ -26,6 +26,12 @@ https://hack.codingblocks.com/app/contests/6166
 Assignment-7
 https://hack.codingblocks.com/app/contests/6279
 
+Assignment-8
+https://hack.codingblocks.com/app/contests/6443
+
+Assignment-9
+https://hack.codingblocks.com/app/contests/6403
+
                                   ********
 
 
