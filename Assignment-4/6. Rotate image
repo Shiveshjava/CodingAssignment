@@ -1,0 +1,33 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+      
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+      
+        int arr[][] = new int[n][n];
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                arr[i][j] = sc.nextInt();
+            }
+        }
+ rotate(arr);
+ 
+     }
+ 
+     private static void rotate(int[][] arr) {
+         // TODO Auto-generated method stub
+       int minrow = 0;
+         int maxrow = arr[0].length-1;
+            int mincol = 0;     
+            int maxcol = arr.length-1;
+            for (int i = maxcol; i>=mincol; i--) {
+                for (int j = minrow; j <= maxrow; j++) {
+                    System.out.print(arr[j][i] + " ");
+                }
+                System.out.println();
+            }
+           
+     }
+    }
+
