@@ -1,1 +1,21 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int sum = 0;
+        
+        // Loop until the cumulative sum becomes negative
+        while (sum >= 0) {
+            int n = sc.nextInt();
+            sum += n;  // Add the input number to the sum
+            
+            if (sum < 0) {
+                break;  // Stop if the cumulative sum becomes negative
+            }
+            
+            System.out.println(n);  // Print the current number
+        }
+    }
+}
 
