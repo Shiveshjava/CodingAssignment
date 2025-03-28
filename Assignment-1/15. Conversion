@@ -1,4 +1,4 @@
-mport java.util.Scanner;
+import java.util.Scanner;
 
 public class day3farenheittocelcius {
     public static void main(String[] args) {
@@ -6,11 +6,11 @@ public class day3farenheittocelcius {
         int min =sc.nextInt();
         int max =sc.nextInt();
         int step = sc.nextInt();
-       ;
+       
         while(min<=max){
             int c = (5*(min-32))/9;
             System.out.println(min + "-"+ c);
-            min=min+20;
+            min=min+step;
         }
     }
 }
