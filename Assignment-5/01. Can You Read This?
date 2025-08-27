@@ -1,4 +1,15 @@
 
+⭐️
+
+Character here is not a variable.
+It is a built-in Java class from the package java.lang.
+The Character class provides a set of static methods (utility methods) for working with characters, such as:
+Character.isUpperCase(ch) → checks if a character is uppercase
+Character.isLowerCase(ch) → checks if a character is lowercase
+Character.isDigit(ch) → checks if a character is a digit
+Character.toLowerCase(ch) → converts to lowercase
+Character.toUpperCase(ch) → converts to uppercase ️
+⭐️
 import java.util.Scanner;
 
 public class Main {
@@ -17,6 +28,7 @@ public class Main {
                 System.out.println();
             }
         }
-        scanner.close();
+        
     }
 }
+
