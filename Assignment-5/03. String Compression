@@ -1,25 +1,33 @@
-
 import java.util.*;
-
 public class Main {
-    public static String compress(String s) {
-        StringBuilder sb = new StringBuilder();
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+
+        String ans = "";
         int count = 1;
 
-        for (int i = 1; i <= s.length(); i++) {
-            if (i < s.length() && s.charAt(i) == s.charAt(i - 1)) {
+        for (int i = 0; i < s.length(); i++) {
+            if (i + 1 < s.length() && s.charAt(i) == s.charAt(i + 1)) {
                 count++;
             } else {
-                sb.append(s.charAt(i - 1)).append(count);
+                ans = ans + s.charAt(i) + count; // append char + count
                 count = 1;
             }
         }
-        return sb.toString();
-    }
 
-    public static void main(String args[]) {
-        Scanner sc = new Scanner(System.in);
-        String input = sc.nextLine();   // read input string
-        System.out.println(compress(input)); // print compressed string
+        System.out.println(ans);
+        sc.close();
+        
+       
+
     }
 }
+
+StringBuilder Class in Java
+
+In Java, the StringBuilder class is a part of the java.lang package that provides a mutable 
+sequence of characters. Unlike String (which is immutable), StringBuilder allows in-place
+modifications, making it memory-efficient and faster for frequent string operations.
+
+
