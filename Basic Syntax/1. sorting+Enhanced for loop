@@ -1,0 +1,26 @@
+package practice;
+
+import java.util.Arrays;
+
+public class practiceJava {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+int arr[]= {1,5,3,2,4};
+char c[]= {'b','a','c','z'};
+
+Arrays.sort(arr);
+for(int i:arr) {
+	System.out.print(i+" ");
+}
+
+	
+Arrays.sort(c);
+	for(char ch:c) {
+		System.out.print(ch+" ");
+	}
+}
+	
+
+}
