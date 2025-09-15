@@ -1,0 +1,19 @@
+package practice;
+public class practiceJava {
+	class Node{
+		int val;
+		Node next;
+		public Node() {
+			this.next=null;
+			this.val=-1;
+			
+		}
+		public Node(int val) {
+			this.val=val;
+			this.next=null;
+		}
+
+	}
+	
+
+}
