@@ -1,0 +1,74 @@
+package day1;
+
+import java.util.Scanner;
+
+public class practice {
+public static void main(String[]args) {
+	Scanner sc =new Scanner(System.in);
+	int row =4;
+	int col =4;
+	int arr[][]= {
+	{1,2,3,4},
+	{5,6,7,8},
+	{9,10,11,12},
+	{13,14,15,16}};
+
+	int toprow=0,bottomrow =arr.length-1,leftcol=0,rightcol=arr[0].length-1;
+	int maxsize = arr.length * arr[0].length;
+	System.out.println(bottomrow);
+	System.out.println(rightcol);
+	System.out.println(maxsize);
+	int count=0;
+	while(count<maxsize && toprow <= bottomrow && leftcol <= rightcol) {
+		for(int i=leftcol;i<=rightcol&&count<maxsize ;i++) {
+			System.out.print(arr[toprow][i]+" ");
+			count++;
+			
+		}
+		System.out.println();
+		toprow++;
+		for(int i=toprow;i<=bottomrow&&count<maxsize ;i++) {
+			System.out.print(arr[i][rightcol]+" ");
+			count++;
+			
+		}
+		System.out.println();
+		rightcol--;
+		for(int i=rightcol;i>=leftcol&&count<maxsize ;i--) {
+			System.out.print(arr[bottomrow][i]+ " ");
+			count++;
+		}
+		System.out.println();
+		bottomrow--;
+		for(int i=bottomrow;i>=toprow&&count<maxsize ;i--) {
+			System.out.print(arr[i][leftcol]+" ");
+			count++;
+		}
+		System.out.println();
+		leftcol++;
+		if(leftcol<0||leftcol>rightcol||toprow<0||toprow>bottomrow) {
+			break;
+		}
+		
+	
+	}
+	
+
+}
+
+
+}
+
+
+OUTPUT
+3
+3
+16
+1 2 3 4 
+8 12 16 
+15 14 13 
+9 5 
+6 7 
+11 
+10 
+
