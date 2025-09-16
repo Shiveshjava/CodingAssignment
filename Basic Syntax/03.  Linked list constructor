@@ -14,6 +14,36 @@ public class practiceJava {
 		}
 
 	}
+	private Node head;
+	private int size;
+	private Node tail;
+public void addFirst(int n) {
+
+}
+public void addLast(int n) {
+}
+public void Display() {
+}
+public void removeFirst() {
+}
+public void addatindx(int val,int idx) {
+}
+public void removeAtIndx(int idx) {
+
+}
+public int getValueATindx(int idx) {
+}
+public int linearSearch(int value) {
+}
+public static void main (String args[]){
+
+}
+practiceJava ll = new practiceJava();
+//		ll.Display();
+		ll.addFirst(10);
+//		ll.addFirst(20);
+		ll.addLast(20);
+		ll.addLast(30);
 	
 
 }
