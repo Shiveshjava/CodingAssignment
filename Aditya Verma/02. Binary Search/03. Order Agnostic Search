@@ -1,0 +1,23 @@
+package practice;
+
+
+class practiceJava {
+	public static void main(String[] args) {
+int arr[]= {9,8,7,6,5,4,3,2,1};
+if(arr.length==1) {
+	System.out.println("only one element present");
+}
+else {
+
+if(arr[0]<arr[1]) {
+	System.out.println("ascending order");
+}
+else
+	System.out.println("Descending order");
+}
+
+	}
+
+}
+OUTPUT:
+Descending order
