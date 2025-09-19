@@ -1,0 +1,52 @@
+package practice;
+import java.util.*;
+
+class practiceJava {
+    public static void main(String[] args) {
+        int arr[] = {2, 4, 10, 10, 10, 18, 20};
+        int target = 10;
+
+        int first = firstOccurrence(arr, target);
+        int last = lastOccurrence(arr, target);
+
+        System.out.println("First Occurrence = " + first);
+        System.out.println("Last Occurrence  = " + last);
+    }
+
+    // Function to find first occurrence
+    private static int firstOccurrence(int[] arr, int target) {
+        int start = 0, end = arr.length - 1, res = -1;
+        while (start <= end) {
+            int mid = (start + end) / 2;
+            if (arr[mid] == target) {
+                res = mid;
+                end = mid - 1; // keep searching left
+            } else if (arr[mid] < target) {
+                start = mid + 1;
+            } else {
+                end = mid - 1;
+            }
+        }
+        return res;
+    }
+
+    // Function to find last occurrence
+    private static int lastOccurrence(int[] arr, int target) {
+        int start = 0, end = arr.length - 1, res = -1;
+        while (start <= end) {
+            int mid = (start + end) / 2;
+            if (arr[mid] == target) {
+                res = mid;
+                start = mid + 1; // keep searching right
+            } else if (arr[mid] < target) {
+                start = mid + 1;
+            } else {
+                end = mid - 1;
+            }
+        }
+        return res;
+    }
+}
+OUTPUT:
+First Occurrence = 2
+Last Occurrence  = 4
