@@ -28,6 +28,15 @@ class practiceJava {
 				}
 			}
 		s.push(new int[]{arr[i], i});
+     // 🔹 Print stack after each push
+    //   System.out.print("Stack after inserting " + arr[i] + ": ");
+   // for (int[] pair : s) {
+  //   System.out.print("[" + pair[0] + "," + pair[1] + "] ");
+ //}
+//      System.out.println();
+    //    }
+
+    //    System.out.println("Nearest greater/smaller indexes: " + a);
 		}
 	System.out.println(a);
 	   ArrayList<Integer> span = new ArrayList<>();
