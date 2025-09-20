@@ -1,0 +1,33 @@
+package practice;
+import java.util.*;
+import java.util.Arrays;
+
+class practiceJava {
+    public static void main(String[] args) {
+    	String []strs = {"flower","flow","flight"};
+    	longestCommonPrefix(strs);
+    }
+    
+        public static void longestCommonPrefix(String[] strs) {
+            
+        	Arrays.sort(strs);
+        	
+        	for(int i=0;i<strs.length;i++) {
+        		String ans=strs[i];
+        	for(int j=0;j<ans.length();j++) {
+        		System.out.print(ans.charAt(j));
+        		
+        		
+        	}
+        	System.out.println();
+        	
+        		
+        	}
+        	
+    }
+}
+OUTPUT:
+flight
+flow
+flower
+
