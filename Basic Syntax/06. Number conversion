@@ -1,0 +1,24 @@
+
+import java.math.BigInteger;
+class Solution {
+    public static String addBinary(String a, String b) {
+       
+//1. It converts a number in string form from any base (2–36) into a BigInteger (decimal internally).
+        BigInteger num1 = new BigInteger(a, 2);
+Example
+new BigInteger("1010", 2)   // binary → decimal 10
+new BigInteger("17", 8)     // octal → decimal 15
+new BigInteger("123", 10)   // decimal → decimal 123
+new BigInteger("1F", 16)    // hex → decimal 31
+new BigInteger("z", 36)     // base36 → decimal 35
+        
+//2. sum.toString(2) → convert the BigInteger sum into a binary string (base-2).
+       System.out.println(sum.toString(2));   // "1101"   (binary)
+System.out.println(sum.toString(8));   // "15"     (octal)
+System.out.println(sum.toString(10));  // "13"     (decimal)
+System.out.println(sum.toString(16));  // "d"      (hexadecimal)
+System.out.println(sum.toString(36));  // "d"      (base36 too!)
+
+       
+    }
+}
